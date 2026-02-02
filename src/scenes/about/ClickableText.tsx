@@ -34,6 +34,7 @@ const ClickableText = ({ text, href, onClick, tooltip }: ClickableTextProps) => 
         }}
         animate={{
           y: [0, -60, 0],
+          x: ["-50%", "-50%", "-50%"],
           scaleY: [1.05, 0.99, 1.05],
           scaleX: [1, 1.01, 1],
         }}
@@ -42,7 +43,7 @@ const ClickableText = ({ text, href, onClick, tooltip }: ClickableTextProps) => 
           repeat: Infinity,
           ease: "easeInOut",
         }}
-          className={`absolute bottom-full left-5 -translate-x-1/2 mb-4 ${bubbleColour} text-text-primary text-sm rounded-full shadow-2xl flex items-center justify-center p-8 z-50`}
+          className={`absolute bottom-full left-1/2 mb-4 ${bubbleColour} text-text-primary text-sm rounded-full shadow-2xl flex items-center justify-center p-8 z-50`}
         >
           <p className="text-center text-base leading-relaxed font-semibold">
             {tooltip}

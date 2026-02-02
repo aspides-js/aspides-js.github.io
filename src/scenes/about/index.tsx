@@ -35,7 +35,7 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
     {
       id: '2',
       title: 'Type I IFN drives neutrophil swarming, impeding lung T cell–macrophage interactions and TB control',
-      description: 'Research exploring immune cell interactions during early TB infection',
+      description: 'Research exploring immune cell interactions during early tuberculosis infection',
       imageUrl: JEMPaper,
       link: 'https://rupress.org/jem/article/222/12/e20250466/278334/Type-I-IFN-drives-neutrophil-swarming-impeding'
     },
@@ -53,7 +53,7 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
     {
       id: '1',
       title: 'Learning to Look',
-      description: "Our submission to D&AD New Blood Awards: an answer to Canestan's brief to break taboos in female intimate health",
+      description: "My submission to D&AD New Blood Awards: an answer to Canestan's brief to break taboos in female intimate health",
       imageUrl: lookImage,
       link: "/NBA2026_Canesten.pdf"
     },
