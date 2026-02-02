@@ -11,6 +11,7 @@ import JEMPaper from '@/assets/jempaper.png';
 import { motion } from 'framer-motion';
 import type { SectionType } from '@/shared/types';
 
+
 type IntroPageProps = {
   onBack: () => void;
   selectedSection: SectionType;
@@ -56,7 +57,7 @@ const IntroPage = ({ selectedSection, setSelectedSection }: IntroPageProps) => {
       title: 'Learning to Look',
       description: "Our submission to D&AD New Blood Awards: an answer to Canestan's brief to break taboos in female intimate health",
       imageUrl: lookImage,
-      link: "public/NBA2026-Canestan.pdf"
+      link: "/NBA2026_Canesten.pdf"
     },
     {
       id: '2',
