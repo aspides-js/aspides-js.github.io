@@ -28,21 +28,21 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
     {
       id: '1',
       title: 'Early TB Transcriptomics App',
-      description: "A Shiny web application for exploration of transcriptomics data in mouse models of early tuberculosis",
+      description: "I built this Shiny web application to accompany our publication, allowing readers to explore our transcriptomics data from mouse models of early tuberculosis",
       imageUrl: shinyappImage,
       link: 'https://ogarra.shinyapps.io/earlymousetb/'
     },
     {
       id: '2',
       title: 'Type I IFN drives neutrophil swarming, impeding lung T cell–macrophage interactions and TB control',
-      description: 'Research exploring immune cell interactions during early tuberculosis infection',
+      description: 'Our research exploring immune cell interactions during early tuberculosis infection',
       imageUrl: JEMPaper,
       link: 'https://rupress.org/jem/article/222/12/e20250466/278334/Type-I-IFN-drives-neutrophil-swarming-impeding'
     },
     {
       id: '3',
       title: 'ChromTools',
-      description: 'A tool for characterising the efficiency of peak detection in genome sequencing data',
+      description: "I created this tool for researchers to be able to model the 'completeness' of their datasets, modelling the efficiency of peak detection in peak-enriched genome sequencing data",
       imageUrl: chromToolsImage,
       link: 'https://github.com/aspides-js/chromTools'
     },
@@ -53,18 +53,18 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
     {
       id: '1',
       title: 'Learning to Look',
-      description: "My submission to D&AD New Blood Awards: an answer to Canestan's brief to break taboos in female intimate health",
+      description: "Our submission to D&AD New Blood Awards: an answer to Canestan's brief to break a specific taboo in female intimate health. \
+        I'm working with Tallula Torthe, Creative Designer and Rhiana Mills, Reproductive and Sexual Health Researcher, to design a campaign to encourage women to take a look at their vulvas.",
       imageUrl: lookImage,
       link: "/NBA2026_Canesten.pdf"
     },
     {
       id: '2',
       title: 'FLORA: how the vaginal microbiome shapes us',
-      description: 'Still very much in progress - I am currently writing a book about the vaginal microbiome. Click for a sneak peek',
+      description: 'I am currently writing a book about the vaginal microbiome, aiming for a curious, accessible and amusing exploration of emerging research in the field.',
       imageUrl: floraImage,
       // link: 'https://example.com/current2'
     },
-    // ... add more items
   ];
 
   return (
@@ -129,7 +129,7 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
             <br /> <br />
             It can take years for research to reach its intended audience. I want to work directly towards putting the research in the hands of those that need it.
             <br /> <br />
-            I've built this website with TypeScript, React and Tailwind CSS to show you at Hertility that, while I may not know a lot of TypeScript and React, 
+            I've built this website in TypeScript and React to show you at Hertility that, while I may not know a lot of TypeScript and React, 
             what I do know is how to design, build and maintain a clean and clear web application. And that it's fun!
             <br /> <br />
             Most importantly, I hope to show you my dedication and desire to join your team.
