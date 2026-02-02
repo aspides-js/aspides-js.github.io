@@ -43,7 +43,7 @@ const LandingPage = ({ onEnter }: LandingPageProps) => {
           onClick={onEnter}
           className="cursor-pointer group mb-8"
         >
-          <div className="w-64 h-64 mx-auto bg-gradient-to-br from-home to-projects rounded-full flex items-center justify-center transform transition-transform group-hover:scale-105">
+          <div className="w-64 h-64 mx-auto bg-gradient-to-br from-portfolio/70 to-portfolio rounded-full flex items-center justify-center transform transition-transform group-hover:scale-105">
             {/* Enter */}
             <ArrowRightEndOnRectangleIcon className="size-24 text-text-primary"/>
           </div>
