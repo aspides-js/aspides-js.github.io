@@ -2,6 +2,11 @@ import Navbar from "@/scenes/navbar";
 import ClickableText from '@/scenes/about/ClickableText';
 import ImageGallery from '@/scenes/about/ImageGallery';
 
+import shinyappImage from '@/assets/shinyapp.png';
+import floraImage from '@/assets/flora.png';
+import lookImage from '@/assets/look.png';
+import chromToolsImage from '@/assets/chromTools.png';
+
 import { motion } from 'framer-motion';
 import type { SectionType } from '@/shared/types';
 
@@ -22,37 +27,44 @@ const IntroPage = ({ selectedSection, setSelectedSection }: IntroPageProps) => {
   const portfolioItems = [
     {
       id: '1',
-      title: 'Project Alpha',
-      description: 'A web application for data visualization',
-      imageUrl: '/images/project1.jpg',
-      link: 'https://example.com/project1'
+      title: 'Early TB Transcriptomics App',
+      description: "A Shiny web application for exploration of transcriptomics data in mouse models of early tuberculosis",
+      imageUrl: shinyappImage,
+      link: 'https://ogarra.shinyapps.io/earlymousetb/'
     },
     {
       id: '2',
-      title: 'Project Beta',
-      description: 'Mobile app for health tracking',
-      imageUrl: '/images/project2.jpg',
-      link: 'https://example.com/project2'
+      title: 'ChromTools',
+      description: 'A tool for characterising the efficiency of peak detection in genome sequencing data',
+      imageUrl: chromToolsImage,
+      link: 'https://github.com/aspides-js/chromTools'
     },
     {
       id: '3',
-      title: 'Project Gamma',
-      description: 'AI-powered chatbot for customer support',
-      imageUrl: '/images/project3.jpg',
-      link: 'https://example.com/project3'
-    }
+      title: 'Type I IFN drives neutrophil swarming, impeding lung T cell–macrophage interactions and TB control',
+      description: 'Research exploring immune cell interactions during early TB infection',
+      imageUrl: '/assets/react.svg',
+      link: 'https://rupress.org/jem/article/222/12/e20250466/278334/Type-I-IFN-drives-neutrophil-swarming-impeding'
+    },
   ];
 
   // Project items (can be different from portfolio)
   const projectItems = [
     {
       id: '1',
-      title: 'Current Work 1',
-      description: 'Women\'s health research',
-      imageUrl: '/images/current1.jpg',
-      link: 'https://example.com/current1'
+      title: 'Learning to Look',
+      description: "Our submission to D&AD New Blood Awards: an answer to Canestan's brief to break taboos in female intimate health",
+      imageUrl: lookImage,
+      link: "./NBA2026-Canestan.pdf"
     },
-    // ... add 8 more items
+    {
+      id: '2',
+      title: 'FLORA: how the vaginal microbiome shapes us',
+      description: 'Still very much in progress - I am currently writing a book about the vaginal microbiome. Click for a sneak peek',
+      imageUrl: floraImage,
+      // link: 'https://example.com/current2'
+    },
+    // ... add more items
   ];
 
   return (
@@ -108,11 +120,19 @@ const IntroPage = ({ selectedSection, setSelectedSection }: IntroPageProps) => {
       <div id="about" className="min-h-screen bg-about flex items-center">
         <div className="max-w-6xl mx-auto px-6 py-24 w-full">
           <h2 className="text-6xl font-bold text-text-primary mb-8">ABOUT ME</h2>
-          <p className="text-2xl">
+          <p className="text-2xl text-text-primary">
             Hello, I'm Jessica.
             <br /><br />
             I'm a research software engineer looking to move into the area I am most interested in: women's health.
-            I'm passionate about using technology to solve real-world problems and make a positive impact on people's lives.
+            <br /> <br />
+            I have extensive experience designing pipelines in Python and R to analyse complex data for biological research, but now I want to apply my skillset to helping women. 
+            <br /> <br />
+            It can take years for research to reach its intended audience. I want to work directly towards putting the research in the hands of those that need it.
+            <br /> <br />
+            I've built this website with TypeScript, React and Tailwind CSS to show you at Hertility that, while I may not know a lot of TypeScript and React, 
+            what I do know is how to design, build and maintain a clean and clear web application. And that it's fun!
+            <br /> <br />
+            Most importantly, I hope to show you my dedication and desire to join your team.
           </p>
         </div>
       </div>
