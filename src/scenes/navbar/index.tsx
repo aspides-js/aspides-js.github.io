@@ -8,9 +8,10 @@ type Props = {
     setSelectedSection: (value: SectionType) => void;
 }
 
+
 const Navbar = ({ selectedSection, setSelectedSection }: Props) => {
   const flexBetween = "flex items-center justify-between"
-  
+
   return (
     <nav>
       <div className={`${flexBetween} fixed top-0 z-30 w-full py-6 bg-home`}>

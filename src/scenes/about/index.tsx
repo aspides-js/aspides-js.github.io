@@ -1,25 +1,23 @@
 import Navbar from "@/scenes/navbar";
 import ClickableText from '@/scenes/about/ClickableText';
 import ImageGallery from '@/scenes/about/ImageGallery';
-
 import shinyappImage from '@/assets/shinyapp.png';
 import floraImage from '@/assets/flora.png';
 import lookImage from '@/assets/look.png';
 import chromToolsImage from '@/assets/chromtools.png';
 import JEMPaper from '@/assets/jempaper.png';
-
 import { motion } from 'framer-motion';
 import type { SectionType } from '@/shared/types';
+import { useSectionObserver } from '@/hooks/useSectionObserver';
 
-
-type IntroPageProps = {
+type Props = {
   onBack: () => void;
   selectedSection: SectionType;
   setSelectedSection: (value: SectionType) => void;
 }
 
-const IntroPage = ({ selectedSection, setSelectedSection }: IntroPageProps) => {
-
+const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
+  useSectionObserver({ setSelectedSection });
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -36,17 +34,17 @@ const IntroPage = ({ selectedSection, setSelectedSection }: IntroPageProps) => {
     },
     {
       id: '2',
-      title: 'ChromTools',
-      description: 'A tool for characterising the efficiency of peak detection in genome sequencing data',
-      imageUrl: chromToolsImage,
-      link: 'https://github.com/aspides-js/chromTools'
-    },
-    {
-      id: '3',
       title: 'Type I IFN drives neutrophil swarming, impeding lung T cell–macrophage interactions and TB control',
       description: 'Research exploring immune cell interactions during early TB infection',
       imageUrl: JEMPaper,
       link: 'https://rupress.org/jem/article/222/12/e20250466/278334/Type-I-IFN-drives-neutrophil-swarming-impeding'
+    },
+    {
+      id: '3',
+      title: 'ChromTools',
+      description: 'A tool for characterising the efficiency of peak detection in genome sequencing data',
+      imageUrl: chromToolsImage,
+      link: 'https://github.com/aspides-js/chromTools'
     },
   ];
 

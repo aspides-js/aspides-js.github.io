@@ -1,6 +1,4 @@
 import { useState } from 'react'
-// import viteLogo from '/vite.svg'
-// import Navbar from "@/scenes/navbar"
 import LandingPage from "@/scenes/landing";
 import IntroPage from "@/scenes/about";
 import type { PageType, SectionType } from './shared/types';
