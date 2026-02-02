@@ -18,7 +18,13 @@ const Navbar = ({ selectedSection, setSelectedSection }: Props) => {
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT SIDE */}
-            <h1 className="text-3xl font-bold">JESSICA SHIELDS</h1>
+            <a className= "text-3xl font-bold"
+              href="/"
+              onClick={() => setSelectedSection('home')}
+            >
+              JESSICA SHIELDS
+              </a>
+
             {/* RIGHT SIDE */}
             <div className={`${flexBetween} w-full`}>
               <div className={`${flexBetween} gap-8 text-1xl`}>
