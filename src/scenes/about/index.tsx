@@ -11,7 +11,7 @@ type IntroPageProps = {
   setSelectedSection: (value: SectionType) => void;
 }
 
-const IntroPage = ({ onBack, selectedSection, setSelectedSection }: IntroPageProps) => {
+const IntroPage = ({ selectedSection, setSelectedSection }: IntroPageProps) => {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
