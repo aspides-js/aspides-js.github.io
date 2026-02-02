@@ -24,7 +24,7 @@ const ImageGallery = ({ items }: ImageGalleryProps) => {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 group"
+          className="relative aspect-square overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group"
           onMouseEnter={() => setHoveredId(item.id)}
           onMouseLeave={() => setHoveredId(null)}
         >
@@ -36,13 +36,13 @@ const ImageGallery = ({ items }: ImageGalleryProps) => {
           />
           
           {/* Overlay on hover */}
-          <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-300 ${
+          <div className={`absolute inset-0 bg-gradient-to-t from-white/80 to-transparent transition-opacity ${
             hoveredId === item.id ? 'opacity-100' : 'opacity-0'
           }`}>
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <div className="absolute bottom-0 left-0 right-0 p-6">
               <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
               {item.description && (
-                <p className="text-sm text-gray-200">{item.description}</p>
+                <p className="text-sm">{item.description}</p>
               )}
             </div>
           </div>
