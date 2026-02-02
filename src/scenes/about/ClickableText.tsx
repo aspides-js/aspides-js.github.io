@@ -11,7 +11,10 @@ type ClickableTextProps = {
 const ClickableText = ({ text, href, onClick, tooltip }: ClickableTextProps) => {
   const clickButtonText = "text-text-primary text-3xl font-bold transition-all duration-300 hover:scale-90 inline-block cursor-pointer hover:opacity-80";
   const [showTooltip, setShowTooltip] = useState(false);
-  const bubbleColour=text.toLowerCase()
+  const bubbleColour = text.toLowerCase() === 'about' ? 'bg-about' :
+                   text.toLowerCase() === 'portfolio' ? 'bg-portfolio' :
+                   text.toLowerCase() === 'projects' ? 'bg-projects' :
+                   text.toLowerCase() === 'cv' ? 'bg-cv' : 'bg-home';
 
   const content = (
     <div 
@@ -39,7 +42,7 @@ const ClickableText = ({ text, href, onClick, tooltip }: ClickableTextProps) => 
           repeat: Infinity,
           ease: "easeInOut",
         }}
-          className={`absolute bottom-full left-5 -translate-x-1/2 mb-4 bg-${bubbleColour} text-text-primary text-sm rounded-full shadow-2xl flex items-center justify-center p-8 z-50`}
+          className={`absolute bottom-full left-5 -translate-x-1/2 mb-4 ${bubbleColour} text-text-primary text-sm rounded-full shadow-2xl flex items-center justify-center p-8 z-50`}
         >
           <p className="text-center text-base leading-relaxed font-semibold">
             {tooltip}
