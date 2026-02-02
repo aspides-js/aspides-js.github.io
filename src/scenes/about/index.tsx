@@ -5,7 +5,8 @@ import ImageGallery from '@/scenes/about/ImageGallery';
 import shinyappImage from '@/assets/shinyapp.png';
 import floraImage from '@/assets/flora.png';
 import lookImage from '@/assets/look.png';
-import chromToolsImage from '@/assets/chromTools.png';
+import chromToolsImage from '@/assets/chromtools.png';
+import JEMPaper from '@/assets/jempaper.png';
 
 import { motion } from 'framer-motion';
 import type { SectionType } from '@/shared/types';
@@ -43,7 +44,7 @@ const IntroPage = ({ selectedSection, setSelectedSection }: IntroPageProps) => {
       id: '3',
       title: 'Type I IFN drives neutrophil swarming, impeding lung T cell–macrophage interactions and TB control',
       description: 'Research exploring immune cell interactions during early TB infection',
-      imageUrl: '/assets/react.svg',
+      imageUrl: JEMPaper,
       link: 'https://rupress.org/jem/article/222/12/e20250466/278334/Type-I-IFN-drives-neutrophil-swarming-impeding'
     },
   ];
@@ -55,7 +56,7 @@ const IntroPage = ({ selectedSection, setSelectedSection }: IntroPageProps) => {
       title: 'Learning to Look',
       description: "Our submission to D&AD New Blood Awards: an answer to Canestan's brief to break taboos in female intimate health",
       imageUrl: lookImage,
-      link: "./NBA2026-Canestan.pdf"
+      link: "public/NBA2026-Canestan.pdf"
     },
     {
       id: '2',
