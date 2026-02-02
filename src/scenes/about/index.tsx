@@ -110,7 +110,7 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
             <ClickableText 
               text="CV" 
               href="./JS_CV_25.pdf"
-              tooltip="Here is my CV!"
+              tooltip="Here is my CV"
             />
           </motion.div>
         </div>
@@ -127,10 +127,10 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
             <br /> <br />
             I have extensive experience designing pipelines in Python and R to analyse complex data for biological research, but now I want to apply my skillset to helping women. 
             <br /> <br />
-            It can take years for research to reach its intended audience. I want to work directly towards putting the research in the hands of those that need it.
+            It can take a long time for research to reach its intended audience. I want to work directly towards putting the research in the hands of those that need it.
             <br /> <br />
-            I've built this website in TypeScript and React to show you at Hertility that, while I may not know a lot of TypeScript and React, 
-            what I do know is how to design, build and maintain a clean and clear web application. And that it's fun!
+            I've built this website in TypeScript and React to demonstrate to you at Hertility my approach to designing, building, and 
+            maintaining a clean, well-structured web application. Also, because it's fun!
             <br /> <br />
             Most importantly, I hope to show you my dedication and desire to join your team.
           </p>
