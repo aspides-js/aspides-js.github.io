@@ -1,6 +1,7 @@
 import Navbar from "@/scenes/navbar";
 import ClickableText from '@/scenes/about/ClickableText';
 import ImageGallery from '@/scenes/about/ImageGallery';
+import tfImage from '@/assets/tf.png';
 import shinyappImage from '@/assets/shinyapp.png';
 import floraImage from '@/assets/flora.png';
 import lookImage from '@/assets/look.png';
@@ -27,21 +28,29 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
   const portfolioItems = [
     {
       id: '1',
+      title: 'transc-factor',
+      description: "This application enables users to input their own datasets to query putative transcription factors regulating \
+          their data. The frontend I built using Flask, with a PostgreSQL database backend",
+      imageUrl: tfImage,
+      // link: 
+    },
+    {
+      id: '2',
       title: 'Early TB Transcriptomics App',
       description: "I built this Shiny web application to accompany our publication, allowing readers to explore our transcriptomics data from mouse models of early tuberculosis",
       imageUrl: shinyappImage,
       link: 'https://ogarra.shinyapps.io/earlymousetb/'
     },
     {
-      id: '2',
+      id: '3',
       title: 'Type I IFN drives neutrophil swarming, impeding lung T cell–macrophage interactions and TB control',
       description: 'Our research exploring immune cell interactions during early tuberculosis infection',
       imageUrl: JEMPaper,
       link: 'https://rupress.org/jem/article/222/12/e20250466/278334/Type-I-IFN-drives-neutrophil-swarming-impeding'
     },
     {
-      id: '3',
-      title: 'ChromTools',
+      id: '4',
+      title: 'ChromTools complete',
       description: "I created this tool for researchers to be able to model the 'completeness' of their datasets, modelling the efficiency of peak detection in peak-enriched genome sequencing data",
       imageUrl: chromToolsImage,
       link: 'https://github.com/aspides-js/chromTools'
