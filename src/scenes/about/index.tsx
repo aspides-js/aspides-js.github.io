@@ -88,11 +88,11 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {useSectio
       <div id="home" className="min-h-screen flex items-center justify-center">
         <div className={`${isAboveMediumScreens ? 'max-w-6xl' : 'max-w-2xl'} mx-auto px-6 py-24`}>
           <div className="text-center mb-16">
-            <h1 className={`${isAboveMediumScreens ? 'text-9xl' : 'text-8xl'} font-bold text-text-primary mb-1`}>JESSICA SHIELDS</h1>
+            <h1 className={`${isAboveMediumScreens ? 'text-9xl' : 'text-7xl'} font-bold text-text-primary mb-1`}>JESSICA SHIELDS</h1>
           </div>
 
           <motion.div 
-            className={`${isAboveMediumScreens ? 'max-w-6xl' : 'max-w-2xl'} mb-8 mx-auto px-6 flex flex-wrap justify-between`}
+            className={`${isAboveMediumScreens ? 'max-w-6xl' : 'max-w-1xl'} mb-8 mx-auto px-6 flex flex-wrap justify-between`}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}

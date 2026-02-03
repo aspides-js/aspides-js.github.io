@@ -34,7 +34,7 @@ const LandingPage = ({ onEnter }: LandingPageProps) => {
       {/* Text that writes across */}
       {displayedText && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
-          <span className={`${isAboveMediumScreens ? 'text-7xl' : 'text-6xl'} md:text-9xl text-text-primary font-serif italic transform whitespace-nowrap`}>
+          <span className={`${isAboveMediumScreens ? 'text-7xl' : 'text-5xl'} md:text-9xl text-text-primary font-serif italic transform whitespace-nowrap`}>
             {displayedText}
           </span>
         </div>
@@ -52,7 +52,7 @@ const LandingPage = ({ onEnter }: LandingPageProps) => {
         </div>
         
         {/* Below centre image text */}
-        <h1 className={`${isAboveMediumScreens ? 'text-9xl' : 'text-8xl'} font-bold text-text-primary mb-8`}>
+        <h1 className={`${isAboveMediumScreens ? 'text-9xl' : 'text-7xl'} font-bold text-text-primary mb-8`}>
             JESSICA SHIELDS
         </h1>
       </div>
