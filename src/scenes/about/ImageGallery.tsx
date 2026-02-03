@@ -1,4 +1,5 @@
 // components/ImageGallery.tsx
+import useMediaQuery from '@/hooks/useMediaQuery';
 import { useState } from 'react';
 
 type GalleryItem = {
@@ -15,9 +16,10 @@ type ImageGalleryProps = {
 
 const ImageGallery = ({ items }: ImageGalleryProps) => {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
-    <div className="grid grid-cols-3 gap-6 w-full">
+    <div className={`grid ${isAboveMediumScreens ? 'grid-cols-3' : 'grid-cols-1'} gap-6 w-full`}>
       {items.map((item) => (
         <a
           key={item.id}

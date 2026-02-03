@@ -10,6 +10,7 @@ import JEMPaper from '@/assets/jempaper.png';
 import { motion } from 'framer-motion';
 import type { SectionType } from '@/shared/types';
 import { useSectionObserver } from '@/hooks/useSectionObserver';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 type Props = {
   onBack: () => void;
@@ -17,12 +18,12 @@ type Props = {
   setSelectedSection: (value: SectionType) => void;
 }
 
-const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
-  useSectionObserver({ setSelectedSection });
+const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {useSectionObserver({ setSelectedSection });
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
 // Portfolio items
   const portfolioItems = [
@@ -85,13 +86,13 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
       
       {/* First Section - Full Height */}
       <div id="home" className="min-h-screen flex items-center justify-center">
-        <div className="max-w-6xl mx-auto px-6 py-24">
+        <div className={`${isAboveMediumScreens ? 'max-w-6xl' : 'max-w-2xl'} mx-auto px-6 py-24`}>
           <div className="text-center mb-16">
-            <h1 className="text-9xl font-bold text-text-primary mb-2">JESSICA SHIELDS</h1>
+            <h1 className={`${isAboveMediumScreens ? 'text-9xl' : 'text-8xl'} font-bold text-text-primary mb-1`}>JESSICA SHIELDS</h1>
           </div>
 
           <motion.div 
-            className="mb-8 flex flex-wrap justify-between max-w-6xl"
+            className={`${isAboveMediumScreens ? 'max-w-6xl' : 'max-w-2xl'} mb-8 mx-auto px-6 flex flex-wrap justify-between`}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -127,7 +128,7 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
 
       {/* About Section */}
       <div id="about" className="min-h-screen bg-about flex items-center">
-        <div className="max-w-6xl mx-auto px-6 py-24 w-full">
+        <div className={`${isAboveMediumScreens ? 'max-w-6xl' : 'max-w-2xl'} mx-auto px-6 py-24 w-full`}>
           <h2 className="text-6xl font-bold text-text-primary mb-8">ABOUT ME</h2>
           <p className="text-2xl text-text-primary">
             Hello, I'm Jessica.
@@ -148,7 +149,7 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
 
       {/* Portfolio Section */}
       <div id="portfolio" className="min-h-screen bg-portfolio flex items-center">
-        <div className="max-w-6xl mx-auto px-6 py-24 w-full">
+        <div className={`${isAboveMediumScreens ? 'max-w-6xl' : 'max-w-2xl'} mx-auto px-6 py-24 w-full`}>
           <h2 className="text-6xl font-bold text-text-primary mb-8">PORTFOLIO</h2>
           <ImageGallery items={portfolioItems} />
         </div>
@@ -156,7 +157,7 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {
 
       {/* Projects Section */}
       <div id="projects" className="min-h-screen bg-projects flex items-center">
-        <div className="max-w-6xl mx-auto px-6 py-24 w-full">
+        <div className={`${isAboveMediumScreens ? 'max-w-6xl' : 'max-w-2xl'} mx-auto px-6 py-24 w-full`}>
           <h2 className="text-6xl font-bold text-text-primary mb-8">PROJECTS</h2>
           <ImageGallery items={projectItems} />
         </div>

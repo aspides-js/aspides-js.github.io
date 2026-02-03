@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ArrowRightEndOnRectangleIcon } from '@heroicons/react/24/outline';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 type LandingPageProps = {
   onEnter: () => void;
@@ -8,6 +9,7 @@ type LandingPageProps = {
 const LandingPage = ({ onEnter }: LandingPageProps) => {
   const [displayedText, setDisplayedText] = useState('');
   const fullText = "Hello Hertility, I'm";
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");  
 
   useEffect(() => {
     const startDelay = setTimeout(() => {
@@ -32,7 +34,7 @@ const LandingPage = ({ onEnter }: LandingPageProps) => {
       {/* Text that writes across */}
       {displayedText && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
-          <span className="text-7xl md:text-9xl text-text-primary font-serif italic transform whitespace-nowrap">
+          <span className={`${isAboveMediumScreens ? 'text-7xl' : 'text-6xl'} md:text-9xl text-text-primary font-serif italic transform whitespace-nowrap`}>
             {displayedText}
           </span>
         </div>
@@ -50,7 +52,7 @@ const LandingPage = ({ onEnter }: LandingPageProps) => {
         </div>
         
         {/* Below centre image text */}
-        <h1 className="text-9xl font-bold text-text-primary mb-8">
+        <h1 className={`${isAboveMediumScreens ? 'text-9xl' : 'text-8xl'} font-bold text-text-primary mb-8`}>
             JESSICA SHIELDS
         </h1>
       </div>
