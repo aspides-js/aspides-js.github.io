@@ -8,7 +8,7 @@ type LandingPageProps = {
 
 const LandingPage = ({ onEnter }: LandingPageProps) => {
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = "Hello Hertility, I'm";
+  const fullText = "Hello, I'm";
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");  
 
   useEffect(() => {
