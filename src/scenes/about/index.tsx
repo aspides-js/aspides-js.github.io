@@ -130,7 +130,7 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {useSectio
       <div id="about" className="min-h-screen bg-about flex items-center">
         <div className={`${isAboveMediumScreens ? 'max-w-6xl' : 'max-w-2xl'} mx-auto px-6 py-24 w-full`}>
           <h2 className="text-6xl font-bold text-text-primary mb-8">ABOUT ME</h2>
-          <p className="text-2xl text-text-primary">
+          <p className="text-xl text-text-primary">
             Hello, I'm Jessica.
             <br /><br />
             I'm a research software engineer looking to move into the area I am most interested in: women's health.
@@ -139,10 +139,8 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {useSectio
             <br /> <br />
             It can take a long time for research to reach its intended audience. I want to work directly towards putting the research in the hands of those that need it.
             <br /> <br />
-            I've built this website in TypeScript and React to demonstrate to you at Hertility my approach to designing, building, and 
+            I've built this website in TypeScript and React to demonstrate my approach to designing, building, and 
             maintaining a clean, well-structured web application. Also, because it's fun!
-            <br /> <br />
-            Most importantly, I hope to show you my dedication and desire to join your team.
           </p>
         </div>
       </div>
